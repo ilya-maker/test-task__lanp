@@ -1,4 +1,4 @@
-[DEMO LINK](https://test-head-works.vercel.app/)
+[DEMO LINK](https://test-task-lanp.vercel.app/)
 
 ## How to run this project
 1. Clone this repository.
