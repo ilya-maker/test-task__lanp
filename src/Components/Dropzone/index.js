@@ -14,12 +14,12 @@ const Dropzone = () => {
     const [errorMessage, setErrorMessage] = useState(false);
 
     const onImageChange = event => {
-        console.log(event.target.files[0]);
         if (event.target.files && event.target.files[0]) {
             if (!event.target.files[0].type.includes('image')) {
                 setErrorMessage(true);
                 return;
             }
+            setErrorMessage(false)
             setActiveDragArea(false)
             let progress = 0;
             const circumference = 65;
