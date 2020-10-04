@@ -1,0 +1,123 @@
+
+@import '../consts.scss';
+
+
+.Dropzone {
+    font-family: 'Proxima Nova';
+
+    &__text {
+        text-align: left;
+        padding: 21px 30px;
+
+        & > h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        & > p {
+            color: #6B85A3;
+            margin: 0;
+        }
+    }
+
+    &__underLine {
+        height: 1px;
+        border: none;
+        background-color: #E8F1FB;
+        margin: 0;
+    }
+
+    &__container {
+        padding: 20px;
+        position: relative;
+    }
+    
+    &__area {
+        outline: none;
+        color: transparent;
+        width: 100%;
+        height: 80vh;
+        box-sizing: border-box;
+        &::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        &--active {
+            border: 1px dashed #4991E5;
+            background: #F5F9FF;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
+    &__cont {
+        &--image {
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            background-color: white;
+            justify-content: center;
+            margin: 0 auto;
+            border: 1px solid #D1E3F8;
+            align-items: center;
+            display: flex;
+
+            & > svg {
+                top: 26.5%;
+                left: 50%;
+                position: absolute;
+                overflow: visible;
+
+                & > circle {
+                    position: absolute;
+                    fill: rgba(0,0,0,0);
+                    stroke: #4991E5;
+                    stroke-width: 1;
+                }
+            }
+
+            & > img {
+                width: 70%;
+                height: 70%;
+            }
+        }
+
+        &--text {
+            font-size: 12px;
+
+            & > p {
+                margin: 10px 0 0 0;
+            }
+
+            & > span {
+                display: block;
+                color: #6B85A3;
+                margin: 10px 0;
+            }
+
+            & > input {
+                display: none;
+            }
+
+            & > label {
+                pointer-events: auto;
+                color: #4991E5;
+            }
+        }
+    }
+
+    &__message {
+        color: #324964;
+    }
+
+    &__error {
+        color: red;
+    }
+}
